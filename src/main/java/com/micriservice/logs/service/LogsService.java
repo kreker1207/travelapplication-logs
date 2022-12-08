@@ -1,7 +1,7 @@
 package com.micriservice.logs.service;
 
-import com.micriservice.logs.entity.Logs;
-import com.micriservice.logs.entity.UserRequest;
+import com.micriservice.logs.model.entity.Logs;
+import com.micriservice.logs.model.dto.SendLogsKafka;
 import com.micriservice.logs.repository.LogsRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -28,12 +28,12 @@ public class LogsService {
         }
         logsRepository.deleteById(id);
     }
-    public void addLog(List<UserRequest> userRequest){
+    public void addLog(SendLogsKafka sendLogsKafka){
         System.out.println("saving");
         UUID uuid = UUID.randomUUID();
         String id = uuid.toString();
         LocalDateTime timestamp = LocalDateTime.now();
-        Logs logs = new Logs().setId(id).setTime(timestamp).setUserRequest(userRequest);
+        Logs logs = new Logs().setId(id).setTime(timestamp).setSendLogsKafka(sendLogsKafka);
         System.out.println("Id of log:" + id);
         logsRepository.save(logs);
     }

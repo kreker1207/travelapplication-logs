@@ -1,7 +1,5 @@
-package com.micriservice.logs.model;
+package com.micriservice.logs.model.dto;
 
-
-import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -13,5 +11,5 @@ import lombok.experimental.Accessors;
 @Accessors(chain = true)
 public class SendLogsKafka {
     private String login;
-    private List<String> searchParams;
+    private String searchParams;
 }

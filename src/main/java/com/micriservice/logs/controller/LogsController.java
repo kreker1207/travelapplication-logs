@@ -1,6 +1,6 @@
 package com.micriservice.logs.controller;
 
-import com.micriservice.logs.entity.Logs;
+import com.micriservice.logs.model.entity.Logs;
 import com.micriservice.logs.service.LogsService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

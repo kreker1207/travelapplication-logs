@@ -1,7 +1,8 @@
-package com.micriservice.logs.model;
+package com.micriservice.logs.model.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.micriservice.logs.model.dto.SendLogsKafka;
 import lombok.Data;
 import lombok.experimental.Accessors;
 import org.springframework.data.mongodb.core.mapping.Document;
